@@ -23,6 +23,7 @@ final class HomeViewController: UIViewController {
     private lazy var newsTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: "NewsTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
         return tableView
@@ -123,7 +124,13 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        guard let cell = newsTableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell") as? NewsTableViewCell else {
+            return UITableViewCell()
+        }
+        if let news = presenter?.returnNews() {
+            cell.setDataToCell(news: news[indexPath.row])
+        }
+        return cell
     }
 }
 

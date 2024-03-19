@@ -115,15 +115,18 @@ extension HomeViewController {
 // MARK: - TableView Delegate
 extension HomeViewController: UITableViewDelegate {
     
+    
 }
 
 // MARK: - TableView Data Source
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return presenter?.returnNewsCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = newsTableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell") as? NewsTableViewCell else {
             return UITableViewCell()
         }

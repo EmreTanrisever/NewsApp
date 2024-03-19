@@ -54,7 +54,7 @@
 		8B49DF282B6EE598000D4D26 /* ETNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ETNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B49DF2C2B6EE598000D4D26 /* ETNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETNewsUITests.swift; sourceTree = "<group>"; };
 		8B49DF2E2B6EE598000D4D26 /* ETNewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETNewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8B49DF3D2B6EE5E4000D4D26 /* ETNetworkKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ETNetworkKit; path = ../../ETNetworkKit; sourceTree = "<group>"; };
+		8B49DF3D2B6EE5E4000D4D26 /* ETNetworkKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ETNetworkKit; sourceTree = "<group>"; };
 		8B49DF452B6EE668000D4D26 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		8B49DF482B6EE677000D4D26 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		8B49DF4A2B6EE682000D4D26 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		8B49DEFF2B6EE597000D4D26 = {
 			isa = PBXGroup;
 			children = (
-				8B49DF3B2B6EE5A9000D4D26 /* Kits */,
+				8B49DF3D2B6EE5E4000D4D26 /* ETNetworkKit */,
 				8B49DF0A2B6EE597000D4D26 /* ETNews */,
 				8B49DF212B6EE598000D4D26 /* ETNewsTests */,
 				8B49DF2B2B6EE598000D4D26 /* ETNewsUITests */,
@@ -139,14 +139,6 @@
 				8B49DF2E2B6EE598000D4D26 /* ETNewsUITestsLaunchTests.swift */,
 			);
 			path = ETNewsUITests;
-			sourceTree = "<group>";
-		};
-		8B49DF3B2B6EE5A9000D4D26 /* Kits */ = {
-			isa = PBXGroup;
-			children = (
-				8B49DF3D2B6EE5E4000D4D26 /* ETNetworkKit */,
-			);
-			path = Kits;
 			sourceTree = "<group>";
 		};
 		8B49DF3F2B6EE60B000D4D26 /* Configure */ = {

@@ -25,7 +25,7 @@ class NewsTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = .systemFont(ofSize: 14, weight: .medium)
         return label
     }()
     
@@ -60,6 +60,7 @@ class NewsTableViewCell: UITableViewCell {
         
         configure()
     }
+    
 }
 
 extension NewsTableViewCell {
@@ -107,12 +108,21 @@ extension NewsTableViewCell {
 extension NewsTableViewCell {
     
     func setDataToCell(news: NewsModel) {
-        guard let newsPublisedAt = news.publishedAt, let newsImageUrl = news.urlToImage, let sourceName = news.source.name else { return }
+        
+        guard let newsPublisedAt = news.publishedAt else { return }
+        guard let sourceName = news.source.name else { return }
+        
         DispatchQueue.main.async {
-            self.newsImageView.kf.setImage(with: URL(string: newsImageUrl))
+            
             self.newsTitleLabel.text = news.title
             self.newsPublishedLabel.text = " \(newsPublisedAt.dateFormetter()) "
             self.newsSourceLabel.text = " \(sourceName) "
+            
+            if let url = news.urlToImage {
+                self.newsImageView.kf.setImage(with: URL(string: url))
+            } else {
+                self.newsImageView.image = UIImage(systemName: "photo")
+            }
         }
     }
 }

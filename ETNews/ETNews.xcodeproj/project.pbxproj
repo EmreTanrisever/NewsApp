@@ -22,6 +22,10 @@
 		8B49DF4E2B6EEBD3000D4D26 /* ETNetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8B49DF4D2B6EEBD3000D4D26 /* ETNetworkKit */; };
 		8B5296282BA8C8300027306D /* DateFormatter+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5296272BA8C8300027306D /* DateFormatter+String.swift */; };
 		8B6DACD92BA7216F008A41ED /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DACD82BA7216F008A41ED /* NewsTableViewCell.swift */; };
+		8BC980782BAF368300553CA5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC980772BAF368300553CA5 /* DetailViewController.swift */; };
+		8BC9807B2BAF369400553CA5 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9807A2BAF369400553CA5 /* DetailPresenter.swift */; };
+		8BC9807E2BAF36A700553CA5 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9807D2BAF36A700553CA5 /* DetailInteractor.swift */; };
+		8BC980802BAF36B100553CA5 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9807F2BAF36B100553CA5 /* DetailRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		8B49DF4A2B6EE682000D4D26 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		8B5296272BA8C8300027306D /* DateFormatter+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+String.swift"; sourceTree = "<group>"; };
 		8B6DACD82BA7216F008A41ED /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		8BC980772BAF368300553CA5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8BC9807A2BAF369400553CA5 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		8BC9807D2BAF36A700553CA5 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		8BC9807F2BAF36B100553CA5 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +185,7 @@
 		8B49DF432B6EE632000D4D26 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8BC980742BAF364000553CA5 /* Detail */,
 				8B49DF442B6EE635000D4D26 /* Home */,
 			);
 			path = Modules;
@@ -231,6 +240,17 @@
 				8B6DACD82BA7216F008A41ED /* NewsTableViewCell.swift */,
 			);
 			path = NewsTableViewCell;
+			sourceTree = "<group>";
+		};
+		8BC980742BAF364000553CA5 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8BC980772BAF368300553CA5 /* DetailViewController.swift */,
+				8BC9807A2BAF369400553CA5 /* DetailPresenter.swift */,
+				8BC9807D2BAF36A700553CA5 /* DetailInteractor.swift */,
+				8BC9807F2BAF36B100553CA5 /* DetailRouter.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,12 +390,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC980782BAF368300553CA5 /* DetailViewController.swift in Sources */,
+				8BC9807E2BAF36A700553CA5 /* DetailInteractor.swift in Sources */,
 				8B49DF102B6EE597000D4D26 /* HomeViewController.swift in Sources */,
 				8B5296282BA8C8300027306D /* DateFormatter+String.swift in Sources */,
+				8BC9807B2BAF369400553CA5 /* DetailPresenter.swift in Sources */,
 				8B6DACD92BA7216F008A41ED /* NewsTableViewCell.swift in Sources */,
 				8B49DF0C2B6EE597000D4D26 /* AppDelegate.swift in Sources */,
 				8B49DF0E2B6EE597000D4D26 /* SceneDelegate.swift in Sources */,
 				8B49DF4B2B6EE682000D4D26 /* HomeInteractor.swift in Sources */,
+				8BC980802BAF36B100553CA5 /* DetailRouter.swift in Sources */,
 				8B49DF462B6EE668000D4D26 /* HomePresenter.swift in Sources */,
 				8B49DF492B6EE677000D4D26 /* HomeRouter.swift in Sources */,
 			);

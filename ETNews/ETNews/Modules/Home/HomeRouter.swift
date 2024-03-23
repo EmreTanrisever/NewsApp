@@ -6,19 +6,24 @@
 //
 
 import Foundation
-import UIKit
+import UIKit.UIViewController
 
 protocol HomeRouterProtocol {
-    
+    func navigateToDetail(url: String)
 }
 
 final class HomeRouter {
     
+    private weak var view: UIViewController?
+    
+    init(view: UIViewController? = nil) {
+        self.view = view
+    }
     
     static func createHomeModule() -> UIViewController {
         let view = HomeViewController()
         let interactor = HomeInteractor()
-        let router = HomeRouter()
+        let router = HomeRouter(view: view)
         
         let presenter = HomePresenter(view: view, interactor: interactor, router: router)
         
@@ -31,4 +36,8 @@ final class HomeRouter {
 
 extension HomeRouter: HomeRouterProtocol {
     
+    func navigateToDetail(url: String) {
+        let detailViewController = DetailRouter.goToDetailController(url: url)
+        self.view?.navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }

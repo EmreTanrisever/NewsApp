@@ -15,6 +15,7 @@ protocol HomePresenterProtocol {
     func viewDidLoad()
     func returnNews() -> [NewsModel]
     func returnNewsCount() -> Int
+    func didSelectRowAt(at indexPath: IndexPath)
 }
 
 final class HomePresenter {
@@ -48,6 +49,10 @@ extension HomePresenter: HomePresenterProtocol {
     
     func returnNewsCount() -> Int {
         return news.count
+    }
+    
+    func didSelectRowAt(at indexPath: IndexPath) {
+        router?.navigateToDetail(url: news[indexPath.row].url!)
     }
 }
 

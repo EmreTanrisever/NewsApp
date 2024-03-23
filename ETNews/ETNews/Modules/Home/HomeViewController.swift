@@ -115,7 +115,9 @@ extension HomeViewController {
 // MARK: - TableView Delegate
 extension HomeViewController: UITableViewDelegate {
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectRowAt(at: indexPath)
+    }
 }
 
 // MARK: - TableView Data Source
